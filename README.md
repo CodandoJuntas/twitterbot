@@ -16,7 +16,8 @@ TODO
 TODO
 
 ## Como contribuir
-TODO
+
+Utilizamos o GitFlow para trabalhar nesse projeto. Caso você não conheça, vale a pena ler esse [artigo](https://medium.com/trainingcenter/utilizando-o-fluxo-git-flow-e63d5e0d5e04).
 
 Após uma contribuição, seu nome será adicionado na lista de colaboradores :)
 
