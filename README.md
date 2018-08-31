@@ -10,7 +10,14 @@ O código é baseado no [Airbnb JS style guide](https://github.com/airbnb/javasc
 TODO
 
 ## Como testar
-TODO
+Todos esses passos serão rodados no CircleCI, então vale a pena checar se está tudo certo, antes de subir a alteração
+
+### Checar sintaxe / teste unitário
+```bash
+make lint # verifica o lint apenas uma vez
+make watch # verifica o lint em toda alteração
+make test # roda os testes unitarios
+```
 
 ## Como fazer o deploy
 TODO
