@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Installing dependencies
+          name: Instalando dependencias
           command: make install
       - save_cache:
           key: twitterbot-{{ .Environment.CIRCLE_SHA1 }}
@@ -24,10 +24,10 @@ jobs:
           keys:
             - twitterbot-{{ .Environment.CIRCLE_SHA1 }}
       - run:
-          name: Running lint
+          name: Rodando lint
           command: make lint
       - run:
-          name: Running test
+          name: Rodando teste
           command: make test
   deploy:
     machine:
@@ -35,16 +35,16 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Create TAG
+          name: Criando TAG
           command: echo 'export TAG=$(eval echo ${CIRCLE_SHA1} | cut -c1-7)' >> $BASH_ENV
       - run:
-          name: Login on Docker Hub
+          name: Login no Docker Hub
           command: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - run:
-          name: Build Image
+          name: Buildando a imagem
           command: docker build -t codandojuntasbot/twitterbot:${TAG} .
       - run:
-          name: Send image to Docker Hub
+          name: Enviando imagem pro Docker Hub
           command: docker push codandojuntasbot/twitterbot:${TAG}
 
 workflows:
