@@ -7,4 +7,4 @@ services:
     command: "npm start"
     environment:
       - NODE_ENV=dev
-    image: CodandoJuntas/twitterbot
+    image: codandojuntasbot/twitterbot

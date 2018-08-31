@@ -42,10 +42,10 @@ jobs:
           command: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       - run:
           name: Build Image
-          command: docker build -t CodandoJuntas/twitterbot:${TAG} .
+          command: docker build -t codandojuntasbot/twitterbot:${TAG} .
       - run:
           name: Send image to Docker Hub
-          command: docker push CodandoJuntas/twitterbot:${TAG}
+          command: docker push codandojuntasbot/twitterbot:${TAG}
 
 workflows:
   version: 2
