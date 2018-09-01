@@ -1,0 +1,10 @@
+version: '2'
+services:
+  twitterbot:
+    build: ./
+    volumes:
+      - .:/app
+    command: "npm start"
+    environment:
+      - NODE_ENV=dev
+    image: codandojuntasbot/twitterbot

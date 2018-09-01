@@ -1,0 +1,64 @@
+version: 2
+jobs:
+  install:
+    working_directory: ~/src
+    docker:
+        - image: circleci/node:8.11.3
+    steps:
+      - checkout
+      - run:
+          name: Instalando dependencias
+          command: make install
+      - save_cache:
+          key: twitterbot-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - node_modules
+
+  test:
+    working_directory: ~/src
+    docker:
+      - image: circleci/node:8.11.3
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - twitterbot-{{ .Environment.CIRCLE_SHA1 }}
+      - run:
+          name: Rodando lint
+          command: make lint
+      - run:
+          name: Rodando teste
+          command: make test
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      - run:
+          name: Criando TAG
+          command: echo 'export TAG=$(eval echo ${CIRCLE_SHA1} | cut -c1-7)' >> $BASH_ENV
+      - run:
+          name: Login no Docker Hub
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - run:
+          name: Buildando a imagem
+          command: docker build -t codandojuntasbot/twitterbot:${TAG} .
+      - run:
+          name: Enviando imagem pro Docker Hub
+          command: docker push codandojuntasbot/twitterbot:${TAG}
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
+      - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
