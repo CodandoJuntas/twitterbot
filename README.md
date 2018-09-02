@@ -20,14 +20,19 @@ E então, execute o comando `make start` no seu terminal.
 ## Como testar
 
 ### Checar sintaxe 
+Execute no terminal os comandos: 
+
 ```bash
 make lint # verifica o lint apenas uma vez
 make watch # verifica o lint em toda alteração no código
 ```
 
+### Checar os logs
+Execute o comando `make logs` no seu terminal.
+
 ## Como fazer o deploy
 
-Depois que suas alterações estiverem na  `master`, rode o comando `make deploy-prod` no seu terminal.
+Depois que suas alterações estiverem na  `master`, execute o comando `make deploy-prod` no seu terminal.
 
 ## Como contribuir
 
