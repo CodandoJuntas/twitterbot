@@ -7,20 +7,27 @@ O código é baseado no [Airbnb JS style guide](https://github.com/airbnb/javasc
 
 
 ## Como rodar localmente
-TODO
+
+Configure as variáveis de ambiente: 
+```bash
+ACCESS_TOKEN
+ACCESS_TOKEN_SECRET
+CONSUMER_KEY
+CONSUMER_SECRET
+```
+E então, execute o comando `make start` no seu terminal.
 
 ## Como testar
-Todos esses passos serão executados no CircleCI, então vale a pena checar se está tudo certo antes de subir a alteração
 
-### Checar sintaxe / teste unitário
+### Checar sintaxe 
 ```bash
 make lint # verifica o lint apenas uma vez
 make watch # verifica o lint em toda alteração no código
-make test # roda os testes unitários
 ```
 
 ## Como fazer o deploy
-TODO
+
+Depois que suas alterações estiverem na  `master`, rode o comando `make deploy-prod` no seu terminal.
 
 ## Como contribuir
 

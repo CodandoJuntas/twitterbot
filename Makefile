@@ -6,8 +6,6 @@ install:
 	npm install
 watch:
 	npm run watch
-run-dev:
-	heroku local
 start:
 	npm start
 deploy-prod:
