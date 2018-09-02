@@ -20,7 +20,7 @@ E então, execute o comando `make start` no seu terminal.
 ## Como testar
 
 ### Checar sintaxe 
-Execute no terminal os comandos: 
+Execute os comandos no seu terminal:
 
 ```bash
 make lint # verifica o lint apenas uma vez
