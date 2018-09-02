@@ -1,0 +1,5 @@
+twitter:
+  accessToken: 'ACCESS_TOKEN'
+  accessTokenSecret: 'ACESS_TOKEN_SECRET'
+  consumerKey: 'CONSUMER_KEY'
+  consumerSecret: 'CONSUMER_SECRET'
