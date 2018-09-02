@@ -31,8 +31,7 @@ make watch # verifica o lint em toda alteração no código
 Execute o comando `make logs` no seu terminal.
 
 ## Como fazer o deploy
-
-Depois que suas alterações estiverem na  `master`, execute o comando `make deploy-prod` no seu terminal.
+Configure a conta do Heroku com `heroku login` e depois que suas alterações estiverem na  `master`, execute o comando `make deploy-prod` no seu terminal.
 
 ## Como contribuir
 
