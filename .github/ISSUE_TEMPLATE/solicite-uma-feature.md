@@ -11,7 +11,7 @@ Uma clara descrição do problema. Ex. Eu sempre me frustro quando [...]
 Uma clara descrição da possível solução.
 
 **Descreva as alternativas que você considerou**
-Uma clara descrição de alternativas para o problema ou feature nova.
+Uma descrição dos possíveis caminhos diferentes que o programa possa tomar para atender as suas expectatívas frustradas descritas no item acima. Uma descrição que nos ajude a entender melhor como implementar uma solução.
 
 **Informações adicionais/Observações**
 Alguma informação adicional ou observação.
