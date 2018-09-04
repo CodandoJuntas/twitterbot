@@ -18,7 +18,7 @@ Passos para reproduzir
 Uma descrição clara do que você você espere que aconteça.
 
 **Screenshots**
-Se possível, adicione screenchots do bug
+Se possível, adicione screenshots do bug
 
 **Informações adicionais/Observações**
 Alguma informação adicional ou observação
